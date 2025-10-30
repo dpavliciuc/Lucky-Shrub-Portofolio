@@ -34,23 +34,28 @@ body {
     background-color: rgb(1, 112, 112);
 }
 
-html, body {
+html, body, header {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 header {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;             /* enable flexbox */
-    justify-content: center;   /* centers content horizontally */
-    align-items: center;       /* centers content vertically */
-    position: relative;
-    background-image: url('../assets/pexels-valeriya-101472.jpg');
-    background-size: cover;        /* scales image to cover header */
-    background-position: center;   /* centers image */
-    background-repeat: no-repeat;  /* prevents tiling */
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  background-image: url('../assets/pexels-valeriya-101472.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem 0;           /* adds breathing space */
+}
+
+.logo {
+  width: 22vw;               /* adjust as you prefer */
+  height: auto;
+  display: block;
+  margin: 0 auto;            /* ensures centering fallback */
 }
 
 header > img {
@@ -378,7 +383,8 @@ button {
 
   header {
     flex-direction: column;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
@@ -464,8 +470,18 @@ button {
 
   .abtgrid p {
     margin: 1rem auto;
-    width: 90%;
+    font-size: 1.2rem;
   }
+
+   .logo {
+    display: block;
+    margin: 0 auto;
+    position: static;          /* remove previous relative centering */
+    transform: none;           /* reset translate */
+    width: 60%;                /* responsive width */
+    height: auto;
+  }
+
   .offer {
     margin: 1rem auto;
     width: 90%;
@@ -531,6 +547,12 @@ button {
 
   nav ul {
     gap: 5px;
+  }
+
+  .abtgrid p {
+    margin: 1rem auto;
+    width: 90%;
+    font-size: 1.4rem;
   }
 
   footer .logofooter {
