@@ -1,0 +1,562 @@
+
+/*Elements*/
+
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+
+}
+
+
+h1{
+    animation: riseup 1.2s ease-in;
+    font-size: 2rem;
+}
+
+h2 {
+    animation: riseup 1.4s ease-in;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+}
+
+
+body {
+    height: 100%;
+    color: rgb(0, 221, 147);
+    margin: 0;
+    background-color: rgb(1, 112, 112);
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;             /* enable flexbox */
+    justify-content: center;   /* centers content horizontally */
+    align-items: center;       /* centers content vertically */
+    position: relative;
+    background-image: url('../assets/pexels-valeriya-101472.jpg');
+    background-size: cover;        /* scales image to cover header */
+    background-position: center;   /* centers image */
+    background-repeat: no-repeat;  /* prevents tiling */
+}
+
+header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /*Will center the logo inside of the header element.*/
+    animation: imgload 1.2s ease-out;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+}
+
+
+/* LVHA Rule */
+nav li {
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(0, 221, 147);
+    font-size: 22px;
+    padding: 10px;
+}
+
+li:visited {
+    color: aquamarine;
+}
+
+li a:hover {
+     text-shadow: 
+    0 0 7px rgb(0, 190, 32),
+    0 0 14px rgb(0, 190, 57),
+    0 0 24px rgb(0, 190, 32),
+    0 0 48px  rgb(0, 190, 57),
+    0 0 52px  rgb(0, 206, 62);
+    transition: 0.5s;
+    color: rgb(41, 255, 59);
+}
+
+li a:active {
+    color:rgb(0, 190, 32)
+}
+
+
+footer {
+ display: flex;
+}
+
+footer div {
+    margin-left: 1.2rem;
+    border-top: 2px solid rgb(0, 221, 147);
+    flex: 1;
+}
+
+
+/*Id's*/
+
+#about h1 {
+    text-align: center;
+    margin: 5rem 0;
+
+}
+
+#contact {
+    margin-bottom: 5rem;
+}
+/* Classes */
+
+ .offer {
+    border: 0.1rem solid #33a000;
+    background-color: #3ea53a0e;
+    margin: 2rem 5rem;
+    border-radius: 2rem;
+    text-align: center;
+
+}
+
+.imgcard {
+
+    width: 100%;
+    height: auto;
+    display: block;
+
+
+
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.letters:hover h1:nth-child(even)
+{
+    transform: rotateY(360deg);
+	transition: 0.5s;
+}
+
+.space {
+    margin: 5px;
+}
+
+.letters:hover h1:nth-child(odd)
+{
+    transform: rotateX(360deg);
+	transition: 0.5s;
+}
+
+.icon {
+    vertical-align: middle;
+    width: 20px;
+    height: auto;
+}
+
+.card
+{
+border: 0.1rem solid rgba(6, 214, 23, 0.651) ;
+border-radius: 0.4rem;
+margin: 1rem 0.5rem;
+padding: 0.2rem 0.2rem;
+ box-shadow:
+     0 0 7px rgba(29, 175, 0, 0.651),
+    0 0 14px  rgba(41, 214, 6, 0.589),
+    0 0 12px  rgba(40, 233, 2, 0.589);
+}
+
+.card:hover {
+    box-shadow:  
+     0 0 7px rgb(0, 190, 32),
+    0 0 14px rgb(0, 190, 57),
+    0 0 24px rgb(0, 190, 32),
+    0 0 48px  rgb(0, 190, 57),
+    0 0 52px  rgb(0, 206, 62);
+    padding: 0.2rem 0.2rem;
+    font-size: 2.1rem;
+    transition: 0.2s;
+
+    cursor:text;
+}
+
+.card div {
+    background-color: rgb(255, 0, 106);
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.466);
+    border-radius: 50%;
+    width: 10vw; 
+    height: 10vw; /* Same height as width for a circle */
+    transform: translateX(1.4rem);
+    transform: skewX(5deg);
+}
+
+.card button {
+  display: block;
+  margin: 0 auto;
+    padding: 2rem 3.2rem;
+    font-size: 2rem;
+    background-color:  rgba(255, 0, 106, 0.781);
+    border: 1px solid  rgb(255, 0, 106);
+    border-radius: 2rem;
+    color: white;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color:  rgba(255, 0, 106, 0.884);
+    transition: 1.2s;
+}
+
+.card button:active {
+    background-color:  rgba(156, 0, 65, 0.884);
+}
+
+.card div h2 {
+    animation: none;
+    color: wheat;
+    font-size: 2.5vw;
+   
+}
+
+.card p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #00cf34;
+   
+}
+
+
+.abtgrid img {
+    width: 32vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+}
+
+.abtgrid {
+  grid-template-columns: auto 1fr;
+  display: grid;
+  place-items: center; /* Centers both vertically and horizontally */
+}
+
+.abtgrid p {
+ 
+  text-align: center;
+  font-size: 1.6rem;
+  margin-right: 25%;
+  margin-left: 25%;
+
+}
+
+.card:hover p {
+    font-size: 1.6rem;
+    transition: 0.4s;
+}
+
+
+footer .logofooter {
+    width: 44px;
+}
+
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* When visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Disable the default tap highlight on mobile */
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden; /* Ensures backgrounds stay inside rounded corners */
+}
+
+
+/* Animations */
+
+@keyframes riseup {
+0% {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+@keyframes imgload {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+50% {
+    opacity: 0.5;
+}
+
+ 100% {
+    scale: 1;
+    opacity: 1;
+ }
+}
+
+/*Media Queries*/
+
+/* Tablets and smaller (=> 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  nav li a {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+
+  .offer {
+    margin: 2rem;
+  }
+
+  .abtgrid img {
+    width: 45vw;
+    margin-left: 1rem;
+  }
+
+  .card div h2 {
+    font-size: 3vw;
+  }
+}
+
+/* Phones and small tablets (≤ 768px) */
+@media (max-width: 768px) {
+
+  /* General body adjustments */
+  body {
+    font-size: 1rem;
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  header img {
+    width: 60%;
+  }
+  
+
+  /* Navigation becomes vertical */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  nav li {
+    display: block;
+  }
+
+  nav li a {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  /* Cards and sections */
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .card p {
+    font-size: 2rem;
+  }
+  
+ .offer h2 {
+    font-size: 2rem;
+ }
+
+ .offer p {
+    font-size: 1.6rem;
+ }
+   .card:hover p{
+    font-size: 2.2rem;
+  }
+  .card div {
+    width: 25vw;
+    height: 25vw;
+    transform: skewX(5deg);
+    margin: 0.5rem;
+  }
+
+  .card div h2 {
+    font-size: 6vw;
+  }
+
+  .card button {
+    width: 80%;
+    padding: 1.2rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+  /* About grid becomes vertical */
+  .abtgrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .abtgrid img {
+    width: 70%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .abtgrid p {
+    margin: 1rem auto;
+    width: 90%;
+  }
+  .offer {
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer div {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  body {
+    width: 100%;
+  }
+
+
+  .letters h1 {
+    font-size: 1.6rem;
+  }
+
+  .card button {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2rem;
+  }
+
+  .card div {
+    width: 20vw;
+    height: 20vw;
+    margin: 1.2rem 0;
+    transform: skewX(5deg); /*Using skew property*/
+  }
+
+  .card div h2 {
+    font-size: 20px;
+  }
+
+  .abtgrid img {
+    width: 80%;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  footer .logofooter {
+    width: 32px;
+  }
+}
+
+/* Accessibility: reduce motion on mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* iPad portrait */
+@media (min-device-width: 768px) and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+  .card {
+    width: 80%;
+  }
+}
+
+/* iPad landscape */
+@media (min-device-width: 768px) and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+  .card {
+    width: 40%;
+  }
+}
